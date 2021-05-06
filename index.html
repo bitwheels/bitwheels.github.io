@@ -1,26 +1,224 @@
 <!DOCTYPE html>
+<html id="page">
+
 <head>
-	<!-- minify -->
-	<link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
+    <title>SubZero Creations</title>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge;" />
+    <link href="https://unpkg.com/cirrus-ui" type="text/css"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+        rel="stylesheet" />
+    <link rel="stylesheet"
+        href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+        integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+    <!-- stylesheet for grxdients.css, minified -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/undefyned/grxdients@1.0.0/grxdients.min.css">
+
+
+
+    <style>
+        .skewed {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #2c3e50;
+            z-index: 0;
+            transform: skewY(3deg);
+            transform-origin: top right;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
-<body class="nes-container is-dark">
-	<section class="nes-container is-dark">
-		<section class="message-list">
-			<section class="message -left">
-				<i class="nes-bcrikko"></i>
-				<!-- Balloon -->
-				<div class="nes-balloon from-left is-dark">
-					<p>BitWheels?</p>
-				</div>
-			</section>
-			<section class="message -right">
-				<!-- Balloon -->
-				<div class="nes-balloon from-right is-dark">
-					<p>Coming soon.</p>
-				</div>
-				<i class="nes-bcrikko"></i>
-			</section>
-		</section>
-	</section>
+
+<body>
+    <div
+        class="header header-fixed unselectable header-animated bg-dark text-light">
+        <div class="header-brand">
+            <div class="nav-item hover-grow">
+                <img class="hover-grow" style="height: 30px; width: 30px;"
+                    src="logo.png" alt="logo" />
+                <h6 class="title px-0">SubZero</h6>
+            </div>
+            <div class="nav-item no-hover">
+
+            </div>
+            <div class="nav-item nav-btn" id="header-btn"> <span></span>
+                <span></span> <span></span>
+            </div>
+        </div>
+        <div class="header-nav" id="header-menu">
+            <div class="nav-right">
+                <div class="nav-item has-sub toggle-hover" id="dropdown">
+                    <a class="nav-dropdown-link text-light">Projects</a>
+                    <ul class="dropdown-menu dropdown-animated" role="menu">
+                        <li role="menu-item"><a href="#">BitWheels</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="section">
+        <div class="hero fullscreen grx-black-bluegrey text-light">
+            <div class="hero-body">
+                <div class="content">
+                    <div class="text-center">
+                        <h1>Hey.</h1>
+                        <h6 class="font-alt font-light">
+                            We're <b>SubZero</b>
+                            <p>We're pushing the digital boundaries</p>
+                        </h6>
+                        <p>Check out <a href="#projects"
+                                class="u u-LR text-light">what
+                                we do
+                                &raquo;</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section" id="projects">
+        <div class="hero fullscreen bg-gray-100">
+            <div class="hero-body">
+                <div class="content">
+                    <div class="text-center">
+                        <h1 class="font-alt">
+                            Projects
+                        </h1>
+
+                        <div class="space py-4"></div>
+
+                        <div class="u-inline-flex">
+                            <div class="px-2">
+                                <div class="card hover-grow"
+                                    style="max-width: 350px;">
+                                    <div class="card__container">
+                                        <div class="card__image"
+                                            style="background-color: rebeccapurple; background-image: radial-gradient(circle at right top, rgb(0, 255, 255), rgba(0, 255, 255, 0)), radial-gradient(circle at left bottom, rgb(255, 20, 146), rgba(255, 20, 146, 0));">
+                                        </div>
+                                        <div class="card__title-container">
+                                            <p class="title">BitWheels</p><span
+                                                class="subtitle">The bridge
+                                                between
+                                                gaming and NFTs</span>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <p>Buy a car NFT and explore a whole
+                                            new world of racing
+                                        </p>
+                                    </div>
+                                    <div class="card__action-bar u-center">
+                                        <button
+                                            class="btn-link outline btn-animated">Learn
+                                            More</button>
+                                        <button
+                                            class="btn-success btn-animated disabled tooltip"
+                                            data-tooltip="Unavailable to public until July 2021"
+                                            disabled>Preorder</button>
+                                    </div>
+                                    <div class="card__footer">
+                                        <div class="u-text-center"><span>Coming
+                                                to OpenSea
+                                                July
+                                                2021
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="px-2">
+                                <div class="card hover-grow"
+                                    style="max-width: 350px;">
+                                    <div class="card__container">
+                                        <div class="card__image"
+                                            style="background-color: rebeccapurple; background-image: radial-gradient(circle at right bottom, rgb(0, 255, 255), rgba(0, 255, 255, 0)), radial-gradient(circle at left top, rgb(255, 20, 146), rgba(255, 20, 146, 0));">
+                                        </div>
+                                        <div class="card__title-container">
+                                            <p class="title">
+                                                Liquidty Series
+                                            </p>
+                                            <div class="u-inline-flex">
+                                                <div class="px-0">
+                                                    <div
+                                                        class="tag-container group-tags">
+                                                        <div class="tag">
+                                                            Released
+                                                        </div>
+                                                        <div
+                                                            class="tag tag--info">
+                                                            13
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <p>
+                                            It's colorful, animated...
+                                            something.
+                                            What else do you
+                                            need?
+                                        </p>
+                                    </div>
+                                    <div class="card__action-bar u-center">
+                                        <button
+                                            class="btn-link outline btn-animated">
+                                            View series
+                                        </button>
+
+                                        <div class="btn-group btn-group-fill">
+                                            <button
+                                                class="btn-success btn-animated disabled tooltip"
+                                                data-tooltip="Sold out"
+                                                disabled>
+                                                Buy
+                                            </button>
+                                            <button
+                                                class="btn-warning btn-animated disabled tooltip"
+                                                data-tooltip="Starting at $1500">
+                                                Bid
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="card__footer">
+                                        <div class="u-text-center">
+                                            Released 2/21/20 |
+                                            <a href="https://twitter.com">
+                                                @chonccyraccoon
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+    </section>
 </body>
+
 </html>
