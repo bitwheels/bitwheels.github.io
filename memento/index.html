@@ -3,6 +3,7 @@
   <head>
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js">
     </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <style>
       body {
         background-color: #0B132B;
@@ -37,19 +38,32 @@
         <path d="M311.141 65.384C306.405 65.384 302.661 64.168 299.909 61.736C297.157 59.304 295.781 55.464 295.781 50.216C295.781 45.8 296.645 40.968 298.373 35.72C300.101 30.408 302.917 25.832 306.821 21.992C310.725 18.088 315.717 16.136 321.797 16.136C329.349 16.136 333.413 20.456 333.989 29.096C335.397 28.776 336.645 28.008 337.733 26.792C338.821 25.512 339.845 24.072 340.805 22.472H343.877C342.149 25.928 340.613 28.648 339.269 30.632C337.925 32.552 336.165 34.12 333.989 35.336C333.605 41.352 332.357 46.632 330.245 51.176C328.197 55.72 325.509 59.24 322.181 61.736C318.853 64.168 315.173 65.384 311.141 65.384ZM314.981 56.744C317.349 56.744 319.557 54.824 321.605 50.984C323.653 47.144 325.061 42.408 325.829 36.776C324.293 36.2 323.525 34.76 323.525 32.456C323.525 29.96 324.421 28.296 326.213 27.464C326.085 25.416 325.733 24.008 325.157 23.24C324.645 22.408 323.781 21.992 322.565 21.992C320.453 21.992 318.437 23.528 316.517 26.6C314.597 29.608 313.029 33.288 311.813 37.64C310.661 41.928 310.085 45.704 310.085 48.968C310.085 52.04 310.437 54.12 311.141 55.208C311.845 56.232 313.125 56.744 314.981 56.744Z" stroke="#5BC0BE" stroke-width="2" mask="url(#path-1-outside-1)"/>
       </svg>
     </div>
+    <div class="field has-addons" id="form">
+      <div class="control">
+        <input class="input" type="text" placeholder="Sign up to be notified when we release">
+      </div>
+      <div class="control">
+        <a class="button is-info">
+          Submit
+        </a>
+      </div>
+    </div>
     <script>
       anime({
         targets: '#memento path',
         strokeDashoffset: [anime.setDashoffset, 0],
         easing: 'easeInOutSine',
         duration: 1000,
-        delay: function(el, i) {
-          return i * 250 }
-        ,
-        direction: 'alternate',
-        loop: true
-      }
-           );
+        delay: function(el, i) {return i * 250}
+      });
+      
+      anime({
+        targets: '#form',
+        delay: 1000,
+        opacity: [0, 1],
+        easing: 'easeInOutSine',
+        duration: 1000,
+      });
     </script>
   </body>
 </html>
