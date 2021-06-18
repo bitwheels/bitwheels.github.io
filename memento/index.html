@@ -57,7 +57,7 @@
       </div>
     </div>
     <script>
-      var timeline = anime.timeline({
+      anime({
         targets: '#memento path',
         strokeDashoffset: [anime.setDashoffset, 0],
         easing: 'easeInOutSine',
@@ -65,14 +65,13 @@
         delay: function(el, i) {return i * 250}
       });
       
-      timeline.add({
+      anime({
         targets: '#form',
+        delay: 1700,
         opacity: [0, 1],
         easing: 'easeInOutSine',
         duration: 1000,
       });
-      
-      timeline.play;
     </script>
   </body>
 </html>
