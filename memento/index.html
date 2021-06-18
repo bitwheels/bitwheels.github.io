@@ -48,10 +48,14 @@
         <input class="input" type="text" placeholder="Get notified via email">
       </div>
       <div class="control">
-        <a class="button is-info">
+        <button class="button is-info" onclick="change">
           &raquo;
-        </a>
+        </button>
       </div>
+    </div>
+
+    <div>
+      <p class="dead" id="thank">Thank you for signing up. You will be notified soon.</p>
     </div>
     <script>
       anime({
@@ -71,6 +75,24 @@
         easing: 'easeInOutSine',
         duration: 2000,
       });
+
+      var timeline = anime.timeline({
+         targets: '#thank',
+         opacity: [0, 1],
+         easing: 'easeInOutSine',
+         duration: 1000,
+      });
+                             
+      timeline.add({
+        targets: '#form',
+        opacity: [1, 0]
+        easing: 'easeInOutSine',
+        duration: 1000,
+      })
+                                
+      function change() {
+        timeline.play
+      }
     </script>
   </body>
 </html>
