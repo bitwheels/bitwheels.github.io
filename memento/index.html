@@ -67,10 +67,13 @@
       
       anime({
         targets: '#form',
-        delay: 1700,
-        opacity: [0, 1],
+        keyframes: [
+          {opacity: 0},
+          {opacity: 0},
+          {opacity: 1},
+        ],
         easing: 'easeInOutSine',
-        duration: 1000,
+        duration: 1500,
       });
     </script>
   </body>
