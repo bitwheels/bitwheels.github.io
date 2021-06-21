@@ -21,6 +21,14 @@
       #thank {
         color: #fff;
       }
+      
+      a:active {
+        color: #5BC0BE;
+      }
+      
+      a:hover {
+        color: #fff;
+      }
     
     </style>
   </head>
@@ -59,9 +67,9 @@
       </div>
     </div>-->
 
-    <div id="thank">
-      <p class="dead">Check back soon for mailing list sign up.</p>
-      <a href="https://mementonoteapp.web.app">Check out a prototype &raquo;</a>
+    <div>
+      <p class="dead" id="check">Check back soon for mailing list sign up.</p>
+      <a class="dead" id="link" href="https://mementonoteapp.web.app">Check out a prototype &raquo;</a>
     </div>
                                 
     
@@ -75,7 +83,7 @@
       });
       
       anime({
-        targets: '#thank',
+        targets: '#thank #link',
         keyframes: [
           {opacity: 0, delay: 1000},
           {opacity: 1},
